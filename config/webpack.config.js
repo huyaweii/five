@@ -50,7 +50,7 @@ module.exports = function(webpackEnv) {
   // It requires a trailing slash, or the file assets will get an incorrect path.
   // In development, we always serve from the root. This makes config easier.
   const publicPath = isEnvProduction
-    ? 'five' + paths.servedPath
+    ? paths.servedPath
     : isEnvDevelopment && '/';
   console.log(publicPath)
   // Some apps do not use client-side routing with pushState.
