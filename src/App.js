@@ -16,7 +16,7 @@ class App extends Component {
   }
   componentDidMount() {
     const _this = this
-    fetch('http://localhost:3000/five/list')
+    fetch('http://localhost:3000/fives/list')
       .then(function(response) {
         return response.json();
       })
@@ -45,7 +45,7 @@ class App extends Component {
   submit() {
     const _this = this
     const {title, price, desc, image} = this.state
-    fetch('http://localhost:3000/five/create', {
+    fetch('http://localhost:3000/fives/create', {
       method: 'post',
       body: JSON.stringify({title, price, desc, image}),
       mode: 'cors',
