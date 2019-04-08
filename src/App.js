@@ -16,7 +16,7 @@ class App extends Component {
   }
   componentDidMount() {
     const _this = this
-    fetch('http://localhost:3000/fives/list')
+    fetch('https://cmty.xyz/fives/list')
       .then(function(response) {
         return response.json();
       })
@@ -30,7 +30,7 @@ class App extends Component {
   upload(e) {
     const _this = this
     const files = e.target.files
-    fetch('http://localhost:3000/uploadToken')
+    fetch('https://cmty.xyz/uploadToken')
       .then(function(response) {
         return response.json();
       })
@@ -45,12 +45,12 @@ class App extends Component {
   submit() {
     const _this = this
     const {title, price, desc, image} = this.state
-    fetch('http://localhost:3000/fives/create', {
+    fetch('https://cmty.xyz/fives/create', {
       method: 'post',
       body: JSON.stringify({title, price, desc, image}),
       mode: 'cors',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/j~son'
       }
     })
       .then(function(response) {
