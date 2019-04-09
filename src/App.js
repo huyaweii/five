@@ -43,21 +43,20 @@ class App extends Component {
     // qiniu.upload()
   }
   submit() {
-    const _this = this
     const {title, price, desc, image} = this.state
     fetch('https://cmty.xyz/fives/create', {
       method: 'post',
       body: JSON.stringify({title, price, desc, image}),
       mode: 'cors',
       headers: {
-        'content-type': 'application/j~son'
+        'content-type': 'application/json'
       }
     })
       .then(function(response) {
         return response.json();
       })
       .then(function(data) {
-        window.location.href = window.location.origin
+        window.location.href = 'https://cmty.xyz/five/'
       })
   }
   render() {
